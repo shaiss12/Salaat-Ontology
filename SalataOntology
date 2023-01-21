@@ -1,0 +1,2546 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.salaatontology.org#"
+     xml:base="http://www.salaatontology.org"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:salaat="http://www.salaatontology.org#">
+    <owl:Ontology rdf:about="http://www.salaatontology.org">
+        <rdfs:comment>This is an ontology about Salaat.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.salaatontology.org#after -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#after">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Supplications"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>Dua&apos;s after salaat.</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#are -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#are">
+        <owl:inverseOf rdf:resource="http://www.salaatontology.org#isTypeOf"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#TypeOfSalaat"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>kinds of salat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#areDoneBefore -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#areDoneBefore">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#WaysOfPurification"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>completed</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#has">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Components"/>
+        <rdfs:label>Salaat has some purification ways</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasAblutionComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#hasAblutionComponent">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Ablution"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#AblutionComponents"/>
+        <rdfs:label>Ablution elements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasGhusalComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#hasGhusalComponent">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Ghusal"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#GhusalComponents"/>
+        <rdfs:label>Ghusal elements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasKhutbah -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#hasKhutbah">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Imaam"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>The sermon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasSignificance -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#hasSignificance">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#SignificanceOfSalaat"/>
+        <rdfs:label>Benefits of Salaat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#isPerformedBy">
+        <owl:inverseOf rdf:resource="http://www.salaatontology.org#performSalaat"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>Offered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#isTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#isTypeOf">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#TypeOfSalaat"/>
+        <rdfs:label>types of salaat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#leads -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#leads">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Imaam"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>Conduct Salaat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#offensiveActsOfAblution -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#offensiveActsOfAblution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Ablution"/>
+        <rdfs:label>Disliked acts of ablution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#offensiveActsOfSalaat -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#offensiveActsOfSalaat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#ActionsMakruhInSalaat"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>Disliked acts of salaat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#performSalaat -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#performSalaat">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>Offer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#proclaimsTheCallFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#proclaimsTheCallFor">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Moazzin"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>Invite for Salaat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#respondTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#respondTo">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <rdfs:label>Reply to Azaan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#sayClosingDua -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#sayClosingDua">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <rdfs:label>Quranic expression said after every Azaan.</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#shouldBeFulfilledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#shouldBeFulfilledBy">
+        <owl:inverseOf rdf:resource="http://www.salaatontology.org#shouldFulfill"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Conditions"/>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>comppleted by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#shouldFulfill -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#shouldFulfill">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Conditions"/>
+        <rdfs:label>Accomplished</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#utters -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#utters">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Moazzin"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <rdfs:label>Call for Azaan.</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#virtuousActsOfAblution -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#virtuousActsOfAblution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Ablution"/>
+        <rdfs:label>Rewarded acts of ablution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#virtuousActsOfAzaan -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#virtuousActsOfAzaan">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#ActionsMustahabInAzaan"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <rdfs:label>Rewarded acts of Azaan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#virtuousActsOfSalaat -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#virtuousActsOfSalaat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label>Rewarded acts of salaat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#salat:hasPrayerComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#salat:hasPrayerComponent">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#PrayerComponents"/>
+        <rdfs:label>Prayer elements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#salat:hasTayammumComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.salaatontology.org#salat:hasTayammumComponent">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Tayammum"/>
+        <rdfs:range rdf:resource="http://www.salaatontology.org#TayammumComponents"/>
+        <rdfs:label>Tayammum elements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.salaatontology.org#hasAnswer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasAnswer">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>Reply to Azaan</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasEndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasEndTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.salaatontology.org#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>ending time of salaat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasFarzRakat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasFarzRakat">
+        <rdfs:subPropertyOf rdf:resource="http://www.salaatontology.org#hasRakat"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>has farz units</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasNafalRakat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasNafalRakat">
+        <rdfs:subPropertyOf rdf:resource="http://www.salaatontology.org#hasRakat"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>nafal units</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasNubOfTimes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasNubOfTimes">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Supplications"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>how many times a supplication repeat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasRakat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasRakat">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>has units</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasStartTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.salaatontology.org#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>starting time of salaat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasSunnatRakat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasSunnatRakat">
+        <rdfs:subPropertyOf rdf:resource="http://www.salaatontology.org#hasRakat"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>sunnat unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasTime">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>timing of salaat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasTotalRakat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasTotalRakat">
+        <rdfs:subPropertyOf rdf:resource="http://www.salaatontology.org#hasRakat"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>total number of units</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasWittr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasWittr">
+        <rdfs:subPropertyOf rdf:resource="http://www.salaatontology.org#hasRakat"/>
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>wittr units</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.salaatontology.org#hasWords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.salaatontology.org#hasWords">
+        <rdfs:domain rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>Sayings of Azaan</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person that involoves in Salaat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Ablution -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Ablution">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#WaysOfPurification"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wudu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#AblutionComponents -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#AblutionComponents">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Components"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to perform ablution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#AblutionFaraiz -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#AblutionFaraiz">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#AblutionComponents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obligatory steps of ablution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#AblutionSunnahs -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#AblutionSunnahs">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#AblutionComponents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-obligatory steps of ablution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ActionsMakruhInAblution -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ActionsMakruhInAblution">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#OffensiveActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disliked acts of ablution.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ActionsMakruhInSalaat -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ActionsMakruhInSalaat">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#OffensiveActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoided actions in Salaat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ActionsMustahabInAblution -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ActionsMustahabInAblution">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#VirtuousActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rewarded acts of ablution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ActionsMustahabInAzaan -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ActionsMustahabInAzaan">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#VirtuousActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rewarded acts of Azaan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ActionsMustahabInSalaat -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ActionsMustahabInSalaat">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#VirtuousActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rewarded acts in Salaat.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ActionsThatBreakAblution -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ActionsThatBreakAblution">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#OffensiveActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoided actions in ablution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ActionsThatNullifySalat -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ActionsThatNullifySalat">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#OffensiveActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disliked acts of Salaat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Azaan -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Azaan">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.salaatontology.org#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.salaatontology.org#OffensiveActs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.salaatontology.org#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.salaatontology.org#VirtuousActs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muslim call for prayers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#BeforePraying -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#BeforePraying">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Conditions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constarint before praying</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#CommonlyCommittedMakruhActs -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#CommonlyCommittedMakruhActs">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#ActionsMakruhInSalaat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common Makruh acts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Components -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Components">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Conditions -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Conditions">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constraints</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#DayPrayers -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#DayPrayers">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <owl:disjointWith rdf:resource="http://www.salaatontology.org#NightPrayers"/>
+        <owl:disjointWith rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Din ke Namaz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Ghusal -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Ghusal">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#WaysOfPurification"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bath</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#GhusalComponents -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#GhusalComponents">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Components"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to perform ghusal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#GhusalFaraiz -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#GhusalFaraiz">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#GhusalComponents"/>
+        <rdfs:label>Obligatory steps of ghusal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#GhusalSunnahs -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#GhusalSunnahs">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#GhusalComponents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-obligatory steps of ghusal.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Imaam -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Imaam">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person that leads Salaat.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#MakruhTahrimi -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#MakruhTahrimi">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#ActionsMakruhInSalaat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To cough without reason or to yawn without reason is Makrooh-e-Tahrimi.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#MakruhTanzihi -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#MakruhTanzihi">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#ActionsMakruhInSalaat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If the prohibition imposed by Allah and His Messenger is not definite and binding, this deed is called &quot;makruh tanzihi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Moazzin -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Moazzin">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person that call for Salaat.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Namazi -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Namazi">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person that perform Salaat.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#NightPrayers -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#NightPrayers">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <owl:disjointWith rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raat ke namaz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#OffensiveActs -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#OffensiveActs">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disliked actions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#PrayerComponents -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#PrayerComponents">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Components"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to perform prayer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#PrayerFaraiz -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#PrayerFaraiz">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#PrayerComponents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obligatory steps of Prayer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#PrayerSunnahs -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#PrayerSunnahs">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#PrayerComponents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-obligatory steps of Prayer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#VirtuousActs"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakable acts of Salaat.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Salaat -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Salaat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.salaatontology.org#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.salaatontology.org#OffensiveActs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.salaatontology.org#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.salaatontology.org#VirtuousActs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd pillar of Islam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#SignificanceOfSalaat -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#SignificanceOfSalaat">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benefits of Prayers in Islam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#SuitationalPrayers -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#SuitationalPrayers">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Salaat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event based prayer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Supplications -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Supplications">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.salaatontology.org#hasWords"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dua&apos;s after salaat.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#Tayammum -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#Tayammum">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#WaysOfPurification"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dry ritual purification.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#TayammumComponents -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#TayammumComponents">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Components"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to perform Tayammum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#TayammumFaraiz -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#TayammumFaraiz">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#TayammumComponents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obligatory steps of Tayammum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#TypeOfSalaat -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#TypeOfSalaat">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Different types of salaah</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#VirtuousActs -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#VirtuousActs">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rewarded acts.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#WaysOfPurification -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#WaysOfPurification">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods of purification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#WhenGhusalIsFarz -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#WhenGhusalIsFarz">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Conditions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obligatory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#WhenGhusalIsMasnoon -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#WhenGhusalIsMasnoon">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Conditions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emphasis to do by Sharia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#WhenGhusalIsMustahab -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#WhenGhusalIsMustahab">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Conditions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rewarded action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.salaatontology.org#WhenTayammumIsAllowed -->
+
+    <owl:Class rdf:about="http://www.salaatontology.org#WhenTayammumIsAllowed">
+        <rdfs:subClassOf rdf:resource="http://www.salaatontology.org#Conditions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suitation when Tayammum is allowed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.salaatontology.org#Abandoning_coughing_and_yawning_in_Salat -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Abandoning_coughing_and_yawning_in_Salat">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#After_Intercourse -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#After_Intercourse">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsFarz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#After_washing_a_corpse -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#After_washing_a_corpse">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Ahmed -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Ahmed">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Moazzin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Ali">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Imaam"/>
+        <leads rdf:resource="http://www.salaatontology.org#Asar_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Eid_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Fajar_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Friday_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Funeral_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Isha_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Magrib_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Taraweeh_Prayer"/>
+        <leads rdf:resource="http://www.salaatontology.org#Zuhar_Prayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Answer_Of_Azaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Answer_Of_Azaan">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <hasAnswer>Allahumma Rabba hadhihi-d-da&apos; watit-tammati was-salatil qa&apos;imati, ati Muhammadan al-wasilata wal-fadilata, wab&apos; athhu maqaman mahmudan-il-ladhi wa&apos; adtahu</hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Asar_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Asar_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#DayPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Farz-e-Aine_Prayer"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When_the_Sun_becomes_Pale_and_its_first_visible_part_sets.</hasEndTime>
+        <hasFarzRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasFarzRakat>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When_the_Sun_is_halfway_down_from_noon_to_sunset</hasStartTime>
+        <hasSunnatRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasSunnatRakat>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#At_the_end_of_Mensturation -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#At_the_end_of_Mensturation">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsFarz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#At_the_night_of_Arfa -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#At_the_night_of_Arfa">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Awwabin_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Awwabin_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#NightPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Sunnat_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed between the Sunset Prayer and the Night Prayer.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Before_Eid_Prayers -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Before_Eid_Prayers">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMasnoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Before_Friday_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Before_Friday_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMasnoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Before_undertaking_a_pilgrimage_to_Makkah -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Before_undertaking_a_pilgrimage_to_Makkah">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Before_wearing_Ehram_while_performing_Hajj -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Before_wearing_Ehram_while_performing_Hajj">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMasnoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Before_wearing_new_clothes -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Before_wearing_new_clothes">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Bending_to_the_right_or_left_or_swinging -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Bending_to_the_right_or_left_or_swinging">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Bowing_the_head_to_one__side -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Bowing_the_head_to_one__side">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#By_omitting_one_of_the_Sunnat_Ghyr_Muakkadah_elements_of_Salat -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#By_omitting_one_of_the_Sunnat_Ghyr_Muakkadah_elements_of_Salat">
+        <rdf:type rdf:resource="http://www.salaatontology.org#MakruhTanzihi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Cleaniness_of_place -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Cleaniness_of_place">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Cleaning_the_nose_with_left_hand -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Cleaning_the_nose_with_left_hand">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Cleaning_the_nose_with_right_hand -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Cleaning_the_nose_with_right_hand">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Cleanliness_of_Body -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Cleanliness_of_Body">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Cleanliness_of_Garments -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Cleanliness_of_Garments">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Closing_the_eyes_or_lips_tighly_so_that_they_are_left_dried -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Closing_the_eyes_or_lips_tighly_so_that_they_are_left_dried">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Combing_your_hair_or_beard -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Combing_your_hair_or_beard">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Completing_in_Ruku_what_you_are_reciting_in_Qiyam -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Completing_in_Ruku_what_you_are_reciting_in_Qiyam">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Coughing_without_a_good_excuse -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Coughing_without_a_good_excuse">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Cover_each_hand -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Cover_each_hand">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TayammumFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Covering_of_Awrah -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Covering_of_Awrah">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Crying_loudly_due_to_worldly_affairs -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Crying_loudly_due_to_worldly_affairs">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Ablution_Calmly -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Ablution_Calmly">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Ablution_a_time_before_Prayer_time_starts -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Ablution_a_time_before_Prayer_time_starts">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Ablution_at_clean_place -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Ablution_at_clean_place">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Ablution_from_water_heated_in_Sun -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Ablution_from_water_heated_in_Sun">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Ablution_in_Mosque -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Ablution_in_Mosque">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Ablution_with_clean_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Ablution_with_clean_water">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Fresh_Ablution_for_every_Farz_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Fresh_Ablution_for_every_Farz_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Miswak -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Miswak">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Ruku_or_Sajda_before_the_imam_does -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Ruku_or_Sajda_before_the_imam_does">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_Sajda_between_the_two_hands -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_Sajda_between_the_two_hands">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Doing_every_step_accordingly -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Doing_every_step_accordingly">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Drinking_a_few_drops_from_the_Ablution_water_left_behind -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Drinking_a_few_drops_from_the_Ablution_water_left_behind">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Dua_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Dua_1">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Supplications"/>
+        <hasNubOfTimes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</hasNubOfTimes>
+        <hasWords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alhamdulillah</hasWords>
+        <hasWords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allah</hasWords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Dua_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Dua_2">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Supplications"/>
+        <hasNubOfTimes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</hasNubOfTimes>
+        <hasWords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allahu Akbar</hasWords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Dua_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Dua_3">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Supplications"/>
+        <hasNubOfTimes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</hasNubOfTimes>
+        <hasWords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subhan Allah</hasWords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Dua_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Dua_4">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Supplications"/>
+        <hasNubOfTimes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasNubOfTimes>
+        <hasWords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allahumma antas’salam;
+Wa-minkas salam;
+Taba’rakhta ya dhal’jalaali wal-ikram.</hasWords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Duha_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Duha_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#DayPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Sunnat_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed from around one hour after the sunrise and around one hour before the sun is at its highest point.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Eating_or_drinking_something -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Eating_or_drinking_something">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Eid_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Eid_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#DayPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Wajib_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Should be performed fifteen minutes after sunrise until zawal.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Embracing_your_child -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Embracing_your_child">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Excretion_of_Blood_or_Puss_from_any_part_of_the_body -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Excretion_of_Blood_or_Puss_from_any_part_of_the_body">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Facing_towards_Qiblah_while_doing_Ablution -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Facing_towards_Qiblah_while_doing_Ablution">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Fade_out -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Fade_out">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Fajar_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Fajar_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#NightPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Farz-e-Aine_Prayer"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Till_Sunrise</hasEndTime>
+        <hasFarzRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasFarzRakat>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dawn</hasStartTime>
+        <hasSunnatRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasSunnatRakat>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Farting -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Farting">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Farz-e-Aine_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Farz-e-Aine_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TypeOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Farz-e-kfaya_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Farz-e-kfaya_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TypeOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Flowing_water_through_the_whole_body -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Flowing_water_through_the_whole_body">
+        <rdf:type rdf:resource="http://www.salaatontology.org#GhusalFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#For_performing_Tawaf -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#For_performing_Tawaf">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Friday_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Friday_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#DayPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Farz-e-Aine_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed on every Friday, after noon instead of the Zuhr prayer.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Funeral_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Funeral_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Farz-e-kfaya_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The prayer is performed in congregation to seek pardon for the deceased and all dead Muslims.</hasTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Giggle_or_Chuckle_while_Praying -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Giggle_or_Chuckle_while_Praying">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Hajaat_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Hajaat_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Nafl_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed the fulfilment of any specific purpose.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Holding_the_wrist_firmly_during_standing_position -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Holding_the_wrist_firmly_during_standing_position">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Imran -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Imran">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Imaam"/>
+        <rdf:type rdf:resource="http://www.salaatontology.org#Namazi"/>
+        <hasKhutbah rdf:resource="http://www.salaatontology.org#Eid_Prayer"/>
+        <hasKhutbah rdf:resource="http://www.salaatontology.org#Friday_Prayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_catch_a_runway_animal -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_catch_a_runway_animal">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_kill_a_snake -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_kill_a_snake">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_put_out_a_fire -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_put_out_a_fire">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_rescue_a_flock_from_wolves -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_rescue_a_flock_from_wolves">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_save_a_blind_person_who_is_in_danger -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_save_a_blind_person_who_is_in_danger">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_save_a_person_who_is_about_to_burn_or_drown -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_save_a_person_who_is_about_to_burn_or_drown">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_save_a_person_who_screams_for_help -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_save_a_person_who_screams_for_help">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_order_to_urinate_or_to_break_wind -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_order_to_urinate_or_to_break_wind">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ReasonsForWhichItIsPermissibleToBreakSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#In_state_of_Madness_or_Insanity -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#In_state_of_Madness_or_Insanity">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Isha_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Isha_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#NightPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Farz-e-Aine_Prayer"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Till_Midnight</hasEndTime>
+        <hasFarzRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasFarzRakat>
+        <hasNafalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasNafalRakat>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When_the_Twilight_completely_disappears</hasStartTime>
+        <hasSunnatRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasSunnatRakat>
+        <hasSunnatRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasSunnatRakat>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</hasTotalRakat>
+        <hasWittr rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasWittr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Istaska_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Istaska_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Nafl_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Offering prayer for rain.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Istikhara_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Istikhara_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Nafl_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed to ask guidance in a matter from Allah.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Kasoof_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Kasoof_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Nafl_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed when there is a Lunar eclipse.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Khauf_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Khauf_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Wajib_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed when there is a fear from somthing.</hasTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Laughing_so_loudly_that_you_hear_your_own_laugh -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Laughing_so_loudly_that_you_hear_your_own_laugh">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Lifting_both_feets_from_the_ground_in_Sajda_position -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Lifting_both_feets_from_the_ground_in_Sajda_position">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Lifting_one_foot_from_the_ground_during_Sajda -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Lifting_one_foot_from_the_ground_during_Sajda">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Looking_around_by_turning_the_head -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Looking_around_by_turning_the_head">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Looking_at_the_feet_during_Ruku -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Looking_at_the_feet_during_Ruku">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Looking_at_the_knees_when_sitting -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Looking_at_the_knees_when_sitting">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Looking_at_the_nose_wings_during_Sajda -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Looking_at_the_nose_wings_during_Sajda">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Looking_at_the_place_of_Sajda_when_one_eis_standing -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Looking_at_the_place_of_Sajda_when_one_eis_standing">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Magrib_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Magrib_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#NightPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Farz-e-Aine_Prayer"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Till_the_Twilight_disappears</hasEndTime>
+        <hasFarzRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasFarzRakat>
+        <hasNafalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasNafalRakat>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When_the_Sun_sets</hasStartTime>
+        <hasSunnatRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasSunnatRakat>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Make_Intention -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Make_Intention">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TayammumFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Masah_of_neck -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Masah_of_neck">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Mature_Muslim -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Mature_Muslim">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Nafl_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Nafl_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TypeOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Not_closing_the_mouth_when_yawning -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Not_closing_the_mouth_when_yawning">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Not_touching_the_nose_to_the_ground_in_Sajda -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Not_touching_the_nose_to_the_ground_in_Sajda">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Not_wiping_your_sweat_in_Salat -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Not_wiping_your_sweat_in_Salat">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Omitting_a_Farz_element_of_Salat -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Omitting_a_Farz_element_of_Salat">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#On_ten_Zil-hajj -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#On_ten_Zil-hajj">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#On_the_night_of_fifteen_Shabaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#On_the_night_of_fifteen_Shabaan">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Performing_2_Rakat_Nafal_Tahiyat-ul-Wudu_after_Ablution -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Performing_2_Rakat_Nafal_Tahiyat-ul-Wudu_after_Ablution">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Place_your_hands_on_the_ground -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Place_your_hands_on_the_ground">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TayammumFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Placing_the_Shahadat_fingers_in_ears_while_saying_Azaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Placing_the_Shahadat_fingers_in_ears_while_saying_Azaan">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAzaan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Pointing_the_feet_towards_Qiblah_while_washing_them -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Pointing_the_feet_towards_Qiblah_while_washing_them">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Praying_at_appropriate_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Praying_at_appropriate_time">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Proper_Intention -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Proper_Intention">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Proper_Niyyat_or_intentions -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Proper_Niyyat_or_intentions">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Protecting_the_clothes_from_the_drops_of_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Protecting_the_clothes_from_the_drops_of_water">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Pulling_up_pants_when_going_down_for_sajda -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Pulling_up_pants_when_going_down_for_sajda">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Putting_more_weight_on_one_foot_than_the_other -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Putting_more_weight_on_one_foot_than_the_other">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Qaaida_Aakhira -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Qaaida_Aakhira">
+        <rdf:type rdf:resource="http://www.salaatontology.org#PrayerFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Qibla_Direction -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Qibla_Direction">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Qirat -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Qirat">
+        <rdf:type rdf:resource="http://www.salaatontology.org#PrayerFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Qiyam -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Qiyam">
+        <rdf:type rdf:resource="http://www.salaatontology.org#PrayerFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Recite_Bismillaah -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Recite_Bismillaah">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TayammumFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Repentence_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Repentence_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Nafl_Prayer"/>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Rinse_mouth -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Rinse_mouth">
+        <rdf:type rdf:resource="http://www.salaatontology.org#GhusalFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Rinse_mouth_3_times -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Rinse_mouth_3_times">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Rinse_nostrils_3_times -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Rinse_nostrils_3_times">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Rinsing_Nostrils -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Rinsing_Nostrils">
+        <rdf:type rdf:resource="http://www.salaatontology.org#GhusalFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Rinsing_nose_and_mouth_with_left_hand -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Rinsing_nose_and_mouth_with_left_hand">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Rub_your_face_with_your_hands -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Rub_your_face_with_your_hands">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TayammumFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Ruku -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Ruku">
+        <rdf:type rdf:resource="http://www.salaatontology.org#PrayerFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Salaat_Serve_as_Purification. -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Salaat_Serve_as_Purification.">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SignificanceOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Salaat_helps_to_avoid_sins. -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Salaat_helps_to_avoid_sins.">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SignificanceOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Salaat_strengthens_faith. -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Salaat_strengthens_faith.">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SignificanceOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Saying_Tasveeb_in_Azan_of_Fajar_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Saying_Tasveeb_in_Azan_of_Fajar_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAzaan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Saying_azaan_Loudly -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Saying_azaan_Loudly">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAzaan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Saying_the_words_of_azaan_slowly -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Saying_the_words_of_azaan_slowly">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAzaan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Scratching_an_itching_place_twice_in_a_Rukn -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Scratching_an_itching_place_twice_in_a_Rukn">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Shutting_the_eyes_without_a_valid_execuse -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Shutting_the_eyes_without_a_valid_execuse">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Sitting_at_dirty_place -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Sitting_at_dirty_place">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Spiliting_in_the_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Spiliting_in_the_water">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Spiliting_while_facing_towards_Qiblah -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Spiliting_while_facing_towards_Qiblah">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Standing_ahead_of_Imam -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Standing_ahead_of_Imam">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Standing_while_facing_towards_Qiblah -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Standing_while_facing_towards_Qiblah">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAzaan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Starting_or_completing_a_Rukn_before_the_imam_starts_it -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Starting_or_completing_a_Rukn_before_the_imam_starts_it">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Starting_with_Bismillah -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Starting_with_Bismillah">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Starting_with_Right_hand -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Starting_with_Right_hand">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Starting_with_right_hand -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Starting_with_right_hand">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Sujood -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Sujood">
+        <rdf:type rdf:resource="http://www.salaatontology.org#PrayerFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Sunnat_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Sunnat_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TypeOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Swallowing_a_food_particle_stuck_in_the_teeth -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Swallowing_a_food_particle_stuck_in_the_teeth">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Tahajjud_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Tahajjud_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#DayPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Sunnat_Prayer"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When_the_Fajar_time_starts</hasEndTime>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Between_midnight</hasStartTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Taharat -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Taharat">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Tahiyat-ul-Masjid_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Tahiyat-ul-Masjid_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Nafl_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One should perform as one enters the Masjid and on proper times.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Tahiyat-ul-Wazu_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Tahiyat-ul-Wazu_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Nafl_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After performing wudu.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Takbir_Tahrimah -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Takbir_Tahrimah">
+        <rdf:type rdf:resource="http://www.salaatontology.org#PrayerFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Taking_a_Nap -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Taking_a_Nap">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Talking -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Talking">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Talking_while_doing_Ablution -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Talking_while_doing_Ablution">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Taraweeh_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Taraweeh_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#NightPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Sunnat_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">During the month of Ramadan between the Night Prayer and the Odd-Numbered Prayer.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Tasbih_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Tasbih_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#DayPrayers"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Can be offered in any part of the day and night besides the Makrooh times of sunrise and sunset.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Tawaf_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Tawaf_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Wajib_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perform this prayer after obligatory Tawaf.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#To_be_Muslim -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#To_be_Muslim">
+        <rdf:type rdf:resource="http://www.salaatontology.org#BeforePraying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#To_recite_the_Quran_wrongly -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#To_recite_the_Quran_wrongly">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Travel_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Travel_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SuitationalPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Wajib_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed when going to travel.</hasTime>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Umar -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Umar">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Moazzin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Urinating_or_Defecating -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Urinating_or_Defecating">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Using_excessive_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Using_excessive_water">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Usman -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Usman">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Namazi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Vomiting -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Vomiting">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatBreakAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Wajib_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Wajib_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#TypeOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Walking_forward_during_salat_without_a_good_reason -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Walking_forward_during_salat_without_a_good_reason">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_every_part_3_times -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_every_part_3_times">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_hands_3_times -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_hands_3_times">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_the_Deceased -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_the_Deceased">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsFarz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_the_Face -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_the_Face">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_the_face_with_both_hands -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_the_face_with_both_hands">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_the_face_with_one_hand -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_the_face_with_one_hand">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMakruhInAblution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_the_feet_till_ankle -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_the_feet_till_ankle">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Washing_the_hands_till_elbows -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Washing_the_hands_till_elbows">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionFaraiz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_a_non-Muslim_has_converted_to_Islam -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_a_non-Muslim_has_converted_to_Islam">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsFarz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_acceptable_water_is_not_available_within_one_mile_radius -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_acceptable_water_is_not_available_within_one_mile_radius">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenTayammumIsAllowed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_there_is_a_legitimate_fear_that_an_enemy_or_dangerous_animal__is_near_the_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_there_is_a_legitimate_fear_that_an_enemy_or_dangerous_animal__is_near_the_water">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenTayammumIsAllowed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_there_is_no_means_of_getting_water_out_of_the_well -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_there_is_no_means_of_getting_water_out_of_the_well">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenTayammumIsAllowed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_there_is_no_trace_of_water_and_no_person_to_ask_about_where_to_find_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_there_is_no_trace_of_water_and_no_person_to_ask_about_where_to_find_water">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenTayammumIsAllowed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_using_water_would_be_dangerous_to_your_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_using_water_would_be_dangerous_to_your_health">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenTayammumIsAllowed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_using_your_waterr_for_Wudu_would_risk_not_having_enough_water__to_drink_later -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_using_your_waterr_for_Wudu_would_risk_not_having_enough_water__to_drink_later">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenTayammumIsAllowed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Wiping_the_Beard -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Wiping_the_Beard">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionSunnahs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Wittar_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Wittar_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#NightPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Wajib_Prayer"/>
+        <hasTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performed daily after the Night Prayer.</hasTime>
+        <hasWittr rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasWittr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Words_Of_Azaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Words_Of_Azaan">
+        <rdf:type rdf:resource="http://www.salaatontology.org#Azaan"/>
+        <hasWords>Allahu Akbar, Allahu Akbar, Allahu Akbar, Allãhu Akbar, Ash-hadu an Ia ilãha illaIIah,Ash-hadu an Ia ilãha illallah, Ash-hadu anna Muhammadan Rasul-Ullah, 
+Ash-hadu anna Muhammadan Rasul-Ullah, Haiya &apos;alas-Salah, Haiya &apos;alas-Salah, Haiya &apos;aIal-Falah, Haiya &apos;alal-Falah, Allahu Akbar, Allahu Akbar,La ilaha illallah.</hasWords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Zuhar_Prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Zuhar_Prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#DayPrayers"/>
+        <isTypeOf rdf:resource="http://www.salaatontology.org#Farz-e-Aine_Prayer"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When_the_Sun_declines_from_the_Zenith.</hasEndTime>
+        <hasFarzRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasFarzRakat>
+        <hasNafalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasNafalRakat>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Begings_after_the_sun_reaches_its_Zenith.</hasStartTime>
+        <hasSunnatRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasSunnatRakat>
+        <hasSunnatRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasSunnatRakat>
+        <hasTotalRakat rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</hasTotalRakat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Before_offering_Kasoof,Khasoof_or_Istaska_prayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Before_offering_Kasoof,Khasoof_or_Istaska_prayer">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenGhusalIsMustahab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#By_omitting_one_of_the_Sunnat_Muakkadah_(Wajib_Elements_of_Salat) -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#By_omitting_one_of_the_Sunnat_Muakkadah_(Wajib_Elements_of_Salat)">
+        <rdf:type rdf:resource="http://www.salaatontology.org#MakruhTahrimi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Changing_place_on_somebody&apos;s_instructions -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Changing_place_on_somebody&apos;s_instructions">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsThatNullifySalat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#It&apos;s_a_Source_of_Forgiveness. -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#It&apos;s_a_Source_of_Forgiveness.">
+        <rdf:type rdf:resource="http://www.salaatontology.org#SignificanceOfSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Performing_Salat_bareheaded_(For_a_man) -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Performing_Salat_bareheaded_(For_a_man)">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Spreading_the_arms_flat_in_Sajda_(Makruh_for_men) -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Spreading_the_arms_flat_in_Sajda_(Makruh_for_men)">
+        <rdf:type rdf:resource="http://www.salaatontology.org#CommonlyCommittedMakruhActs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Turning_the_head,_when_saying_salam -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Turning_the_head,_when_saying_salam">
+        <rdf:type rdf:resource="http://www.salaatontology.org#ActionsMustahabInSalaat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#When_you_don&apos;t_have_enough_money_to_purchase_water_that_is_being_sold -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#When_you_don&apos;t_have_enough_money_to_purchase_water_that_is_being_sold">
+        <rdf:type rdf:resource="http://www.salaatontology.org#WhenTayammumIsAllowed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.salaatontology.org#Wiping_the_head(Masah) -->
+
+    <owl:NamedIndividual rdf:about="http://www.salaatontology.org#Wiping_the_head(Masah)">
+        <rdf:type rdf:resource="http://www.salaatontology.org#AblutionFaraiz"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
